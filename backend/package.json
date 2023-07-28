@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "A challenge by Codesh solved my HugoNicolau",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoNicolau/FullStack-Afiliados.git"
+  },
+  "author": "HugoNicolau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HugoNicolau/FullStack-Afiliados/issues"
+  },
+  "homepage": "https://github.com/HugoNicolau/FullStack-Afiliados#readme"
+}

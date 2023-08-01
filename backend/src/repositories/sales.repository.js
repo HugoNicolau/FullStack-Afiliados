@@ -1,7 +1,8 @@
-import { connectionDB } from "../database/db";
+import { connectionDB } from "../database/db.js";
 
 
-async function postSales(sales) {
+async function postSales(parsedText) {
+    foreach
     await connectionDB.query('INSERT INTO ...')
 }
 

@@ -1,13 +1,11 @@
-import salesService from "../services/sales.services";
+import salesService from "../services/sales.services.js";
 
 export async function postSales(req, res) {
-    const sales = req.body;
+    const salesText = req.body;
 
     try {
-        const result = await salesService.postSales(sales);
-
+        const result = await salesService.postSales(salesText);
         res.status(200).send(result);
-
     } catch (err) {
         //TODO: Error treatment
         return res.status(500).send(err.message)

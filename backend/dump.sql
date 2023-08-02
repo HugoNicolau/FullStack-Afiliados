@@ -1,0 +1,8 @@
+CREATE TABLE "sales" (
+  "id" SERIAL PRIMARY KEY,
+  "type" VARCHAR(1) NOT NULL,
+  "date" VARCHAR(25) NOT NULL,
+  "product" VARCHAR(30) NOT NULL,
+  "value" INTEGER NOT NULL,
+  "seller" VARCHAR(20) NOT NULL
+);

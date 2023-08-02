@@ -8,7 +8,7 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 dotenv.config();
 const port = process.env.PORT || 5000;
-// process.env.NODE_TLS_REJECT_UNAUTHORIZED="0";
+process.env.NODE_TLS_REJECT_UNAUTHORIZED="0";
 
 
 server.use(sales);

@@ -4,8 +4,8 @@ import { readFile } from "fs/promises";
 
 async function postSales(salesText) {
 
-    const readText = readingFile(salesText);
-    const parsedText = parseText(readText);
+    const readText = await readingFile(salesText);
+    const parsedText = await parseText(readText);
 
     const result = await salesRepository.postSales(parsedText);
 
@@ -18,14 +18,13 @@ async function readingFile(fileName) {
         if (err) {
             console.log(err);
             return;
-        }
-        
+        }        
     });
 
     return readText;
 }
 
-async function parseText(text){
+async function parseText(fullText){
 
     class OneSale {
         constructor(type, date, product, value, seller) {
@@ -38,7 +37,7 @@ async function parseText(text){
     }
 
     const arrSales = []
-    const splittedSalesArray =  text.split('\n');
+    const splittedSalesArray =  fullText.split('\n');
 
     for (let i = 0; i < splittedSalesArray.length; i++){
         
